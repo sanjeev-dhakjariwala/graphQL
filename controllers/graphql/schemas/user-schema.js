@@ -1,6 +1,7 @@
 const { gql } = require("apollo-server-express");
 
 const userSchema = gql`
+
   type User {
     id: ID!
     name: String!
@@ -8,14 +9,9 @@ const userSchema = gql`
     age: Int!
     nationality: Nationality!
     friends: [User]
-    favouriteMovies: [Movie]
+    favoriteMovies: [Movie]
   }
-  type Movie {
-    id: ID!
-    name: String!
-    yearOfPublication: Int!
-    isInTheaters: Boolean!
-  }
+
   enum Nationality {
     CANADA
     BRAZIL

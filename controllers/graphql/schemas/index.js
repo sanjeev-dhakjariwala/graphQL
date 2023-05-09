@@ -6,9 +6,11 @@ const { resolvers } = require("../resolvers/Resolvers");
 
 const typeDefs = [mainSchema, userSchema, movieSchema];
 
-const learnMainSchema = makeExecutableSchema({
-  typeDefs: [typeDefs],
-  resolvers,
-});
+// const learnMainSchema = makeExecutableSchema({
+//   typeDefs: [userSchema, movieSchema, mainSchema],
+//   resolvers: resolvers
+// });
 
-module.exports = { learnMainSchema };
+module.exports = { typeDefs, resolvers };
+
+// module.exports = { learnMainSchema };
